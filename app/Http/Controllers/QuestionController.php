@@ -2,22 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Group;
+use Auth;
+use App\Question;
 use Illuminate\Http\Request;
 
-class GroupController extends Controller
+class QuestionController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-     //show all
     public function index()
     {
-        $groups = Group::all();
-        return view('group_index')->with('groups', $groups);
+        //
+        $qs = Question::all();
+        return view('ShowAllQ')->with('qs' , $qs);
+
     }
 
     /**
@@ -27,8 +28,8 @@ class GroupController extends Controller
      */
     public function create()
     {
-        $group = Group::find($id);
-        return view('group_create')->with('group', $group);
+        //
+        return view('QuestionPage');
     }
 
     /**
@@ -39,12 +40,18 @@ class GroupController extends Controller
      */
     public function store(Request $request)
     {
-        $group = new Group();
-        $group->name = $request->name;
-        $group->description = $request->description;
-        $group->creator_id = 1;
-        $group->save();
-        return redirect()->action('GroupController@index');
+
+        $request->validate([
+            'conten' => 'required'
+        ]);
+
+
+        $o = new Question();
+        $o->publisher_id = $request->publisher_id;
+        $o->content = $request->conten;
+        $o->group_id = 1;
+        $o->save();
+        return redirect('/questions/show/'.$o->id);
     }
 
     /**
@@ -55,8 +62,9 @@ class GroupController extends Controller
      */
     public function show($id)
     {
-        $group = Group::find($id);
-        return view('group_show')->with('group', $group);
+        $o = Question::find($id);
+        $user = auth::id();
+        return view('ShowAndA')->with('o',$o);
     }
 
     /**
@@ -67,8 +75,8 @@ class GroupController extends Controller
      */
     public function edit($id)
     {
-        $group = Group::find($id);
-        return view('group_edit')->with('group', $group);
+        $o = Question::find($id);
+        return view('EditPageQ')->with('o',$o);
     }
 
     /**
@@ -80,11 +88,11 @@ class GroupController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $group = Group::find($id);
-        $group->name = $request->name;
-        $group->description = $request->description;
-        $group->save();
-        return redirect()->action('GroupController@index');
+        //
+        $o = Question::find($id);
+        $o->content = $request->conten;
+        $o->save();
+        return redirect('/questions/show');
     }
 
     /**
@@ -95,7 +103,10 @@ class GroupController extends Controller
      */
     public function destroy($id)
     {
-        Group::find($id)->delete();
-        return redirect()->action('GroupController@index');
+        //
+        Question::find($id)->delete();
+
+        return redirect('/questions/show');
+
     }
 }

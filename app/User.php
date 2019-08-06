@@ -37,9 +37,22 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    //----------------Ahmed Osama-------------
+    /*
+            Ahmed Osama
+    */
     public function groups()
     {
         return $this->belongsToMany('App\User');
+    }
+
+
+    /*
+            Anwar
+    */
+    public function answer() {
+        return $this->hasMany('App\Answer');
+    }
+    public function question() {
+        return $this->hasMany('App\Question');
     }
 }

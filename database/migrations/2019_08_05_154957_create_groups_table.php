@@ -21,9 +21,9 @@ class CreateGroupsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table('groups', function (Blueprint $table) {
-            $table->foreign('creator_id')->references('id')->on('users');
-        });
+        // Schema::table('groups', function (Blueprint $table) {
+        //     $table->foreign('creator_id')->references('id')->on('users');
+        // });
 
     }
 
