@@ -16,7 +16,7 @@ class QuestionController extends Controller
     {
         //
         $qs = Question::all();
-        return view('ShowAll')->with('qs' , $qs);
+        return view('ShowAllQ')->with('qs' , $qs);
 
     }
 
@@ -28,6 +28,7 @@ class QuestionController extends Controller
     public function create()
     {
         //
+        return view('QuestionPage');
     }
 
     /**
@@ -45,9 +46,10 @@ class QuestionController extends Controller
 
 
         $o = new Question();
+        $o->user_id = $request->user_id;
         $o->content = $request->conten;
         $o->save();
-        return redirect('/show/'.$o->id);
+        return redirect('/questions/show/'.$o->id);
     }
 
     /**
@@ -59,6 +61,7 @@ class QuestionController extends Controller
     public function show($id)
     {
         $o = Question::find($id);
+        $user = auth()->user();
         return view('ShowAndA')->with('o',$o);
     }
 
@@ -70,7 +73,8 @@ class QuestionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $o = Question::find($id);
+        return view('EditPageQ')->with('o',$o);
     }
 
     /**
@@ -83,6 +87,10 @@ class QuestionController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $o = Question::find($id);
+        $o->content = $request->conten;
+        $o->save();
+        return redirect('/questions/show/all');
     }
 
     /**
@@ -94,5 +102,9 @@ class QuestionController extends Controller
     public function destroy($id)
     {
         //
+        Question::find($id)->delete();
+
+        return redirect('/questions/show/all');
+
     }
 }

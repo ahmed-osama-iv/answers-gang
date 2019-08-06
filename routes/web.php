@@ -12,29 +12,38 @@
 */
 
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 
 
-
-Route::get('/All','QuestionController@index');
-Route::get('/qa',function (){
-   return view('ShowAndA');
-});
-Route::post('/store','QuestionController@store');
-
-Route::post('/store_','AnswerController@store');
-
-Route::get('/show/{id}','QuestionController@show');
-
-Route::get('/qp' , function (){
+Route::get('/questions/create' , function (){
     return view('QuestionPage');
 });
 
+Route::get('/questions/show/{id}','QuestionController@show');
+
+Route::get('/questions/show/all','QuestionController@index');
+Route::get('/answers/show/all','AnswerController@index');
+
+Route::get('/questions/edit/{id}','QuestionController@edit');
+Route::get('/answers/edit/{id}','AnswerController@edit');
+
+Route::put('/questions/update/{id}','QuestionController@update');
+Route::put('/answers/update/{id}','AnswerController@update');
+
+Route::get('/querstions/delete/{id}','QuestionController@destroy');
+Route::get('/answers/delete/{id}','AnswerController@destroy');
+
+Route::post('/querstions/store/','QuestionController@store');
+Route::post('/answers/store/','AnswerController@store');
 
 
+
+
+//------------------------------------------------------------
 
 
 
@@ -43,20 +52,17 @@ Route::get('/show','ControllerUser@index');
 
 Route::get('/edit/{id}' , 'ControllerUser@edit');
 
-
-
-
 Route::post('/create','ControllerUser@create');
 
 Route::post('/update','ControllerUser@update');
 
 Route::get('/delete/{id}','ControllerUser@delete');
 
-
 Route::get('/index1','ControllerUser@index1');
-
 Route::get('/create_',function(){
    return view('create');
 });
 
+Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');

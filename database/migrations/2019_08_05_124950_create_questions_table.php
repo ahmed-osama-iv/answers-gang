@@ -16,11 +16,16 @@ class CreateQuestionsTable extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('content');
-           # $table->unsignedBigInteger('publisher_id');
+            $table->unsignedBigInteger('user_id')->nullable();
             #$table->unsignedBigInteger('group_id');
             #$table->unsignedBigInteger('bestanswer_id ')->nullable();
             $table->timestamps();
         });
+/*
+        Schema::table('questions', function (Blueprint $table) {
+            $table->foreign('user_id')->references('id')->on('user');
+        });
+*/
     }
 
 

@@ -8,8 +8,9 @@
     </div>
 @endif
 
-<form method="post" action="/store">
+<form method="post" action="/querstions/store/">
     @csrf
+<input type="hidden" value="{{auth::id()}}" name="user_id">
 <textarea rows="4" cols="50" name="conten" placeholder="Enter your question !">
 </textarea>
     <input type="submit" name="save" placeholder="save">

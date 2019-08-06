@@ -16,7 +16,7 @@ class CreateAnswersTable extends Migration
         Schema::create('answers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('content');
-           # $table->unsignedBigInteger('publisher_id');
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('question_id');
             $table->timestamps();
         });
@@ -24,6 +24,11 @@ class CreateAnswersTable extends Migration
         Schema::table('answers', function (Blueprint $table) {
             $table->foreign('question_id')->references('id')->on('questions');
         });
+/*
+        Schema::table('answers', function (Blueprint $table) {
+            $table->foreign('user_id')->references('id')->on('users');
+        });
+*/
     }
 
 

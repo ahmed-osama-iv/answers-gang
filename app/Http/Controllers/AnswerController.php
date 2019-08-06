@@ -15,6 +15,8 @@ class AnswerController extends Controller
     public function index()
     {
         //
+        $qs = Answer::all();
+        return view('ShowAllA')->with('qs' , $qs);
     }
 
     /**
@@ -43,9 +45,12 @@ class AnswerController extends Controller
 
 
         $o = new Answer();
+        $o->user_id = $request->user_id;
         $o->question_id = $request->question_id;
         $o->content = $request->conten;
         $o->save();
+
+        return redirect('/questions/show/'.$request->question_id);
     }
 
     /**
@@ -68,6 +73,8 @@ class AnswerController extends Controller
     public function edit($id)
     {
         //
+        $o = Answer::find($id);
+        return view('EditPageA')->with('o',$o);
     }
 
     /**
@@ -80,6 +87,10 @@ class AnswerController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $o = Answer::find($id);
+        $o->content = $request->conten;
+        $o->save();
+        return redirect('/answers/show/all');
     }
 
     /**
@@ -91,5 +102,9 @@ class AnswerController extends Controller
     public function destroy($id)
     {
         //
+        Answer::find($id)->delete();
+
+        return redirect('/answers/show/all');
+
     }
 }
