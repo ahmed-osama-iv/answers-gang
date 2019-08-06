@@ -1,3 +1,7 @@
+@extends('layouts/master')
+
+@section('content')
+
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -15,3 +19,5 @@
 </textarea>
     <input type="submit" name="save" placeholder="save">
 </form>
+
+@endsection
