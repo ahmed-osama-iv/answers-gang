@@ -16,7 +16,7 @@ class AnswerController extends Controller
     {
         //
         $qs = Answer::all();
-        return view('ShowAllA')->with('qs' , $qs);
+        return view('answer_index')->with('qs' , $qs);
     }
 
     /**
@@ -74,7 +74,7 @@ class AnswerController extends Controller
     {
         //
         $o = Answer::find($id);
-        return view('EditPageA')->with('o',$o);
+        return view('answer_edit')->with('o',$o);
     }
 
     /**

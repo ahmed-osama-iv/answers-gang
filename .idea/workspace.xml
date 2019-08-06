@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b0fc3fcc-71f9-40e8-af0d-1d7df7baa1c3" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/EditPageA.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/EditPageQ.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ShowAllA.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ShowAllQ.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/answer_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/question_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/answer_index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/question_index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Answer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Answer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AnswerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AnswerController.php" afterDir="false" />
@@ -16,9 +16,9 @@
       <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_05_124950_create_questions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_05_124950_create_questions_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_05_125536_create_answers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_05_125536_create_answers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/QuestionPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/QuestionPage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/question_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/question_create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/ShowAll.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ShowAndA.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ShowAndA.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/answer_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/answer_create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>

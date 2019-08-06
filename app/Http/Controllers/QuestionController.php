@@ -17,7 +17,7 @@ class QuestionController extends Controller
     {
         //
         $qs = Question::all();
-        return view('ShowAllQ')->with('qs' , $qs);
+        return view('question_index')->with('qs' , $qs);
 
     }
 
@@ -29,7 +29,7 @@ class QuestionController extends Controller
     public function create()
     {
         //
-        return view('QuestionPage');
+        return view('question_create');
     }
 
     /**
@@ -64,7 +64,7 @@ class QuestionController extends Controller
     {
         $o = Question::find($id);
         $user = auth::id();
-        return view('ShowAndA')->with('o',$o);
+        return view('answer_create')->with('o',$o);
     }
 
     /**
@@ -76,7 +76,7 @@ class QuestionController extends Controller
     public function edit($id)
     {
         $o = Question::find($id);
-        return view('EditPageQ')->with('o',$o);
+        return view('question_edit')->with('o',$o);
     }
 
     /**

@@ -40,7 +40,7 @@ Route::delete('/groups/delete/{id}', 'GroupController@destroy');
             Questions and Answers --- by Anwar
 */
 Route::get('/questions/create' , function (){
-    return view('QuestionPage');
+    return view('question_create');
 });
 
 Route::get('/questions/show/{id}','QuestionController@show');
