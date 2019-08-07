@@ -64,7 +64,7 @@ class QuestionController extends Controller
     {
         $o = Question::find($id);
         $user = auth::id();
-        return view('answer_create')->with('o',$o);
+        return view('question_show')->with('o',$o);
     }
 
     /**

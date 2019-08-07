@@ -14,4 +14,8 @@ class Group extends Model
     {
         return $this->belongsToMany('App\User');
     }
+
+    public function question() {
+        return $this->hasMany('App\Question', 'group_id', 'id');
+    }
 }

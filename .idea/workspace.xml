@@ -18,7 +18,7 @@
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_05_125536_create_answers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_05_125536_create_answers_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/question_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/question_create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/ShowAll.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/answer_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/answer_create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/question_show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/question_show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>

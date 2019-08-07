@@ -18,6 +18,7 @@ class ForeignKeys extends Migration
         });
 
         Schema::table('questions', function (Blueprint $table) {
+            $table->foreign('group_id')->references('id')->on('groups');
             $table->foreign('publisher_id')->references('id')->on('users');
             $table->foreign('bestanswer_id')->references('id')->on('answers');
         });

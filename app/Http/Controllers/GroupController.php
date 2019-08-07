@@ -27,8 +27,7 @@ class GroupController extends Controller
      */
     public function create()
     {
-        $group = Group::find($id);
-        return view('group_create')->with('group', $group);
+        return view('group_create');
     }
 
     /**

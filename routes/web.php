@@ -22,6 +22,8 @@ Route::get('/', function () {
 */
 Route::get('/groups/show', 'GroupController@index');
 
+Route::get('/groups/show/{id}', 'GroupController@show');
+
 Route::get('/groups/create', function () {
     return view('group_create');
 });

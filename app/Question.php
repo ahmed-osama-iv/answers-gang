@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
 
-    protected $fillable = ['content'];
+    protected $fillable = ['content', 'publisher_id', 'group_id', 'bestanswer_id'];
     protected $connection = 'mysql';
     protected $primaryKey = 'id';
     protected $table = 'questions';
@@ -18,6 +18,10 @@ class Question extends Model
 
     public function user() {
         return $this->belongsTo('App\User');
+    }
+
+    public function group() {
+        return $this->belongsTo('App\Group', 'group_id');
     }
 
 }
