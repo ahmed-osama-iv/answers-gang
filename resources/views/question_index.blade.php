@@ -17,8 +17,7 @@
             <div class="question">
             <a href="/questions/show/{{$o->id}}" ><div class="contet-question">{{$o->title}}</div>
               <div class="vote">
-                <a onclick="M.toast({html: 'Vote Up'})" class="btn purple darken-4 "><i class="far fa-thumbs-up"></i></a>
-                <a onclick="M.toast({html: 'Vote Down'})" class="btn purple darken-4 "><i class="far fa-thumbs-down"></i></a>
+                
                
              
               @can('viewAny', App\Question::class)

@@ -19,6 +19,8 @@ class AnswerVotesController extends Controller
         //id2 question
 
        # dd($obj);
+       $this->middleware('auth');
+
         $q1 =AnswerVotes::where([['answer_id','=',$id1],['voter_id','=',auth::id()]]);
         $c1 = count($q1->get());
 
@@ -52,6 +54,7 @@ class AnswerVotesController extends Controller
 
     public function down($id1){
 
+        $this->middleware('auth');
 
         $q1 =AnswerVotes::where([['answer_id','=',$id1],['voter_id','=',auth::id()]]);
         $c1 = count($q1->get());

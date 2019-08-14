@@ -19,7 +19,7 @@ class QuestionVotesController extends Controller
 
     public function up($id){
 
-
+        $this->middleware('auth');
         $q1 =QuestionVotes::where([['post_id','=',$id],['voter_id','=',auth::id()]]);
         $c1 = count($q1->get());
 
@@ -52,6 +52,7 @@ class QuestionVotesController extends Controller
 
     public function down($id){
 
+        $this->middleware('auth');
         $q1 =QuestionVotes::where([['post_id','=',$id],['voter_id','=',auth::id()]]);
         $c1 = count($q1->get());
 

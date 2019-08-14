@@ -11,8 +11,13 @@
           <div class="contet-question" id = "ihab-data-question" > {{$o->content}}</div>
         
             <div class="vote">
+              @auth()
               <a onclick="M.toast({html: 'Vote Up'})" href="/questions/voteup/{{$o->id}}" class="btn purple darken-4 "><i class="far fa-thumbs-up"></i></a>
               <a onclick="M.toast({html: 'Vote Down'})" href="/questions/votedown/{{$o->id}}" class="btn purple darken-4 "><i class="far fa-thumbs-down"></i></a>
+              @else
+              <a onclick="M.toast({html: 'please login first'})" class="btn purple darken-4 "><i class="far fa-thumbs-up"></i></a>
+                <a onclick="M.toast({html: 'please login first'})" class="btn purple darken-4 "><i class="far fa-thumbs-down"></i></a>
+              @endauth
               <br><br>{{$o->score}}<br>
               @can('viewAny', \App\Question::class)
                 <a href="/questions/edit/{{$o->id}}" class="btn btn-primary">edit</a>
@@ -31,8 +36,14 @@
          <p style="position: relative; left: 90%; top:200px">
           <div class="contet-question" id = "ihab-data-answer">{{$ans->content}}</div>
             <div class="vote">
-              <a onclick="M.toast({html: 'Vote Up'})"  href="/answers/voteup/{{$ans->id}}" class="btn purple darken-4 "><i class="far fa-thumbs-up"></i></a>
-              <a onclick="M.toast({html: 'Vote Down'})"  href="/answers/votedown/{{$ans->id}}" class="btn purple darken-4 "><i class="far fa-thumbs-down"></i></a>
+              @auth()
+                <a onclick="M.toast({html: 'Vote Up'})"  href="/answers/voteup/{{$ans->id}}" class="btn purple darken-4 "><i class="far fa-thumbs-up"></i></a>
+                <a onclick="M.toast({html: 'Vote Down'})"  href="/answers/votedown/{{$ans->id}}" class="btn purple darken-4 "><i class="far fa-thumbs-down"></i></a>
+              @else
+                <a onclick="M.toast({html: 'please login first'})" class="btn purple darken-4 "><i class="far fa-thumbs-up"></i></a>
+                <a onclick="M.toast({html: 'please login first'})" class="btn purple darken-4 "><i class="far fa-thumbs-down"></i></a>
+              @endauth
+
               {{$ans->score}}
               @can('viewAny', \App\Question::class)
               <a href="/answers/edit/{{$ans->id}}" class="btn btn-primary">edit</a>
