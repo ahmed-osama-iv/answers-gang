@@ -1,0 +1,47 @@
+*
+{box-sizing: border-box}
+
+@media screen and (max-width : 414px)
+{
+  .hamada
+  {
+ 
+    width: 50% !important; 
+    height: 60px !important;
+    position: relative !important;  
+    top: -70px !important; 
+    left: 15px !important; 
+  }
+}
+@media screen and (max-width : 308px)
+{
+  .hamada
+  {
+    
+    width: 90% !important; 
+    height: 30px !important;
+    position: relative !important;  
+    top: -70px !important; 
+    left: 15px !important; 
+  }
+}
+@media screen and (max-width : 166px)
+{
+  .hamada
+  {
+   
+    width: 100% !important; 
+    height: 80px !important;
+    position: relative !important;  
+    top: -140px !important; 
+    left: 0px !important; 
+  }
+}
+.hamada{
+  background: white !important; 
+  position: relative; 
+  top: -40px ; 
+  left: 15px; 
+  width: 200px ; 
+  height: 30px;
+}
