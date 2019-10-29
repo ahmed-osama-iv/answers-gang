@@ -43,8 +43,8 @@ A step by step series of examples that tell you how to get a development env run
 ## Built With
 
 -   [Laravel](https://laravel.com/docs/5.8) - Web Framework For PHP
-- MySQL[enter link description here](https://github.com/ihabTawffiq)
--   [Vue](https://vuejs.org/) - UI Framework
+- [MySQL](https://www.mysql.com/) - Relational database management system
+-   [React](https://reactjs.org/) - JavaScript library for building user interfaces
 
 ## Authors
 
