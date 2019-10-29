@@ -1,72 +1,58 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# Answer's Gang [![Open Source Love svg1](https://camo.githubusercontent.com/d41b9884bd102b525c8fb9a8c3c8d3bbed2b67f0/68747470733a2f2f6261646765732e66726170736f66742e636f6d2f6f732f76312f6f70656e2d736f757263652e7376673f763d313033)](https://github.com/ellerbrock/open-source-badges/) [![PyPI license](https://camo.githubusercontent.com/105401a5eb379c5331aa32033a4b4b37aeb10b81/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f616e7369636f6c6f72746167732e737667)](https://pypi.python.org/pypi/ansicolortags/)
 
-## About Laravel
+Answer's Gang is an open source question and answer web app made with Laravel and MySQL.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Getting Started
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Prerequisites
 
-## Learning Laravel
+To be able to run the project on your system you should have: *Git *PHP v7.3.5+ Mysql v14.14+ *Node v8.12.0+ *NPM v6.4.1+ *Composer v1.8.6+
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Note: you might be able to run the project on older versions than versions mentioned above but to avoid any issues we recommend you to use the recommended versions
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1400 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Installation
 
-## Laravel Sponsors
+A step by step series of examples that tell you how to get a development env running
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```
+1. Clone gitHub repo:
+    git clone https://github.com/ahmed-osama-iv/Answers-Gang.git
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+2. For next steps you have to change your currend directory to the project directory by running:
+    cd Answers-Gang
 
-## Contributing
+3. To install project dependencies:
+    composer install
+    npm instal
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. To be able to run the project:
+     *Take a copy of .env.example file and name it .env or by running: cp .env.example .env
+     *Edit .env file and fill your DB_ host credentials.
+     *Migrate project's DB tables to your DB by running: php artisan migrate 
+     *Set a key for Laravel's encrypter by running: php artisan key:generate
+     *Create a link to Storage folder by running: php artisan storage:link
 
-## Security Vulnerabilities
+5. Finally to run the project:
+    php artisan serve
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```
+
+## Built With
+
+-   [Laravel](https://laravel.com/docs/5.8) - Web Framework For PHP
+- MySQL[enter link description here](https://github.com/ihabTawffiq)
+-   [Vue](https://vuejs.org/) - UI Framework
+
+## Authors
+
+-   **[Ahmed Osama](https://github.com/ahmed-osama-iv)** - Backend development
+-   **[Mohamed Anwar](https://github.com/2019mohamed)** - Backend development
+-    **[Omar Nasr](https://github.com/O-Nasr)** - Backend development
+-    **[Ihab Tawffiq](https://github.com/ihabTawffiq)** - Frontend development
 
 ## License
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Abdullahalabd/Simple/blob/master/LICENSE) file for details
